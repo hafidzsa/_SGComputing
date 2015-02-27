@@ -1,0 +1,12 @@
+from random import randint
+
+ind_1 = "1010101010"
+ind_2 = "1000010000"
+
+r = randint(0,len(ind_1)-1)
+
+new_ind_1 = ind_1[r:] + ind_2[:r]
+new_ind_2 = ind_2[r:] + ind_1[:r]
+
+print r,new_ind_1,new_ind_2
+
