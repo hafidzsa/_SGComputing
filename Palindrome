@@ -1,0 +1,21 @@
+a = raw_input()
+b = a[::-1]
+mirrored = True
+mirror = {'E':'3','O':'0','0':'O','O':'O','0':'0','Z':'5','2':'S','S':'2','3':'E','5':'Z','8':'8'}
+same = "AHIJMOTUVWXY80"
+
+for huruf1,huruf2 in zip(a,b):
+    if huruf1 in mirror:
+        if mirror[huruf1] != huruf2:
+            mirrored = False
+    elif huruf1 not in same:
+        mirrored = False
+
+if (a==b) and mirrored:
+    print a+" -- is a mirrored palindrome"
+elif (a==b):
+    print a+" -- is a regular palindrome"
+elif mirrored:
+    print a+" -- is a mirrored string"
+else:
+    print a+" -- is not a palindrome"

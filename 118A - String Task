@@ -1,0 +1,4 @@
+a = raw_input().lower()
+vokal = "aiueo"
+solusi = ".".join([huruf for huruf in a if huruf not in "aoyeui"])
+print ("."+solusi)
